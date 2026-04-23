@@ -1125,7 +1125,7 @@
 const DEFAULT_CONFIG = {
   bsrUrl:       'https://standardapi.sorftime.com',
   apiToken:     'rezbv0v5vxryzkjvmdc4cgvyckdsqt09',
-  geminiKey:    'AIzaSyD6NSYRLariX3sGIQLTGCU7ujPJudoIdKg',
+  geminiKey:    'AIzaSyA4DRfTisvwuyO8Dh3Ir6tqLlq1KW6twAc',
   geminiProxy:  '',   // 代理域名，例如 https://gemini-proxy.example.com
   supabaseUrl:  'https://vkipqeqyptrvxgtwyzcc.supabase.co',
   supabaseKey:  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZraXBxZXF5cHRydnhndHd5emNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTU1NjUsImV4cCI6MjA5MTk5MTU2NX0.d0C91T5W3mf55cGwez4cQJ6Ld0X2oPCq-blKog0oa0k'
@@ -2853,11 +2853,9 @@ ${abaTop20.join('、')}
   const proxyBase = (config.geminiProxy || '').replace(/\/$/, '');
   const baseHost  = proxyBase || 'https://generativelanguage.googleapis.com';
 
-  // 只使用 gemini-2.5-flash-lite
+  // 只使用 gemini-2.5-pro
   const candidates = [
-    { ver: 'v1beta', model: 'gemini-2.5-flash-lite-preview-04-17' },
-    { ver: 'v1beta', model: 'gemini-2.5-flash-lite' },
-    { ver: 'v1beta', model: 'gemini-2.5-flash-preview-04-17' },
+    { ver: 'v1beta', model: 'gemini-2.5-pro' },
   ];
   let resp, lastErr;
   for (const { ver, model } of candidates) {
@@ -3953,8 +3951,8 @@ function renderPriorityChecklist(scores, corrections, inputs) {
     <div class="fw-item">
       <div class="fw-label">谷歌 Gemini 2.5 API Key</div>
       <div class="fw-key-row">
-        <span class="fw-key-val">AIzaSyD6NSYRLariX3sGIQLTGCU7ujPJudoIdKg</span>
-        <button class="fw-copy-btn" onclick="fwCopy(this,'AIzaSyD6NSYRLariX3sGIQLTGCU7ujPJudoIdKg')">复制</button>
+        <span class="fw-key-val">AIzaSyA4DRfTisvwuyO8Dh3Ir6tqLlq1KW6twAc</span>
+        <button class="fw-copy-btn" onclick="fwCopy(this,'AIzaSyA4DRfTisvwuyO8Dh3Ir6tqLlq1KW6twAc')">复制</button>
       </div>
     </div>
 
